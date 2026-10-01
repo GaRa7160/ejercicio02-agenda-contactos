@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.formulario input {
+    display: block;
+    margin: 8px 0;
+    padding: 6px;
+    width: 95%;
+}
+
+.formulario button {
+    padding: 8px 16px;
+    background: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#listaContactos {
+    list-style: none;
+    padding: 0;
+}
+
+.contacto {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacto button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    cursor: pointer;
+}
