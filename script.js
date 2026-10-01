@@ -14,4 +14,16 @@ document.getElementById("btnAgregar").addEventListener("click", () => {
     document.getElementById("nombre").value = "";
     document.getElementById("telefono").value = "";
     document.getElementById("correo").value = "";
+    mostrarContactos();
 });
+
+function mostrarContactos() {
+    const lista = document.getElementById("listaContactos");
+    lista.innerHTML = "";
+    contactos.forEach((c) => {
+        const li = document.createElement("li");
+        li.className = "contacto";
+        li.innerHTML = `<span>${c.nombre} - ${c.telefono} - ${c.correo}</span>`;
+        lista.appendChild(li);
+    });
+}
