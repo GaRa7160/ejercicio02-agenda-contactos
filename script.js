@@ -20,10 +20,16 @@ document.getElementById("btnAgregar").addEventListener("click", () => {
 function mostrarContactos() {
     const lista = document.getElementById("listaContactos");
     lista.innerHTML = "";
-    contactos.forEach((c) => {
+    contactos.forEach((c, index) => {
         const li = document.createElement("li");
         li.className = "contacto";
-        li.innerHTML = `<span>${c.nombre} - ${c.telefono} - ${c.correo}</span>`;
+        li.innerHTML = `<span>${c.nombre} - ${c.telefono} - ${c.correo}</span>
+                         <button onclick="eliminarContacto(${index})">Eliminar</button>`;
         lista.appendChild(li);
     });
+}
+
+function eliminarContacto(index) {
+    contactos.splice(index, 1);
+    mostrarContactos();
 }
